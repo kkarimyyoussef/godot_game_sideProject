@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dggequecj3lm7"]
+
+[ext_resource type="Texture2D" uid="uid://bhet4cpxf1fun" path="res://Idle.png" id="1_3inec"]
+
+[sub_resource type="GDScript" id="GDScript_3inec"]
+script/source = "extends RigidBody2D
+
+	
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks2v0"]
+
+[node name="Box" type="RigidBody2D"]
+collision_layer = 2
+gravity_scale = 0.0
+script = SubResource("GDScript_3inec")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_3inec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_ks2v0")
